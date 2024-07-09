@@ -18,7 +18,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/MostPopularProduct"
+                    "$ref": "#/components/schemas/Alphabetical_list_of_product"
                   }
                 }
               }
@@ -27,14 +27,14 @@
         }
       }
     },
-    "/api/category_most_popular_product/{categoryNameX}": {
+    "/api/category_most_popular_product/{categoryName}": {
       "get": {
         "tags": [
           "NorthwindCloudApp"
         ],
         "parameters": [
           {
-            "name": "categoryNameX",
+            "name": "categoryName",
             "in": "path",
             "required": true,
             "schema": {
@@ -50,7 +50,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Alphabetical_list_of_product"
+                    "$ref": "#/components/schemas/MostPopularProduct"
                   }
                 }
               }
@@ -59,7 +59,7 @@
         }
       }
     },
-    "/api/category_most_popular_productZ": {
+    "/api/category_most_popular_product": {
       "get": {
         "tags": [
           "NorthwindCloudApp"
@@ -70,7 +70,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
+                  "type": "array",
                   "items": {
                     "$ref": "#/components/schemas/MostPopularProduct"
                   }
@@ -89,10 +89,10 @@
         "parameters": [
           {
             "name": "categoryName",
-            "in": "query",
-            "required": false,
+            "in": "path",
+            "required": true,
             "schema": {
-              "type": "number"
+              "type": "string"
             }
           }
         ],
@@ -126,7 +126,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CategorySummaryByCustomer"
+                    "$ref": "#/components/schemas/CategorySalesSummary"
                   }
                 }
               }
@@ -142,7 +142,7 @@
         ],
         "parameters": [
           {
-            "name": "categoryNameY",
+            "name": "categoryName",
             "in": "path",
             "required": true,
             "schema": {
@@ -1418,14 +1418,16 @@
         "type": "object",
         "properties": {
           "orderYear": {
-            "type": "string"
+            "type": "integer",
+            "format": "int32"
           },
           "category": {
-            "type": "integer",
+            "type": "string",
             "nullable": true
           },
           "numberOfOrders": {
-            "type": "string"
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -1433,19 +1435,19 @@
       "Category": {
         "type": "object",
         "properties": {
-          "categoryIDD": {
+          "categoryID": {
             "type": "integer",
             "format": "int32"
           },
-          "categoryNameX": {
+          "categoryName": {
             "type": "string",
             "nullable": true
           },
-          "descriptionX": {
+          "description": {
             "type": "string",
             "nullable": true
           },
-          "pictureX": {
+          "picture": {
             "type": "string",
             "format": "byte",
             "nullable": true
@@ -1453,7 +1455,7 @@
           "products": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CategoryOrdersByCountry"
+              "$ref": "#/components/schemas/Product"
             },
             "nullable": true
           }
