@@ -18,7 +18,778 @@
                 "schema": {
                   "type": "array",
                   "items": {
+                    "$ref": "#/components/schemas/Alphabetical_list_of_product"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/category_most_popular_product/{categoryName}": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "parameters": [
+          {
+            "name": "categoryName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
                     "$ref": "#/components/schemas/MostPopularProduct"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/category_most_popular_product": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MostPopularProduct"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/category_summary_by_customer/{categoryName}": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "parameters": [
+          {
+            "name": "categoryName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CategorySummaryByCustomer"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/category_sales_summary": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CategorySalesSummary"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/category_orders/{categoryName}": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "parameters": [
+          {
+            "name": "categoryName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoryOrdersCount"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/categories": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Category"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/category_orders_by_country/{categoryName}": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "parameters": [
+          {
+            "name": "categoryName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CategoryOrdersByCountry"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/categories_ordered_by_year": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CategoriesOrderedByYear"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/categories_ordered_by_year/{categoryName}": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "parameters": [
+          {
+            "name": "categoryName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CategoriesOrderedByYear"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/categories_products": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Product"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/category_sales_for_1997": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Category_Sales_for_1997"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/current_products_list": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Current_Product_List"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/customers": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Customer"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/customers_min": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CustomerMinimal"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/orders_by_employee/{employeeId}": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "parameters": [
+          {
+            "name": "employeeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OrderCustomer<>f__AnonymousType8"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/customers_orders": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CustomerOrdersSummary"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/customers_orders_min": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CustomerOrdersMinSummary"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/customers_orders_min/{customerId}": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "parameters": [
+          {
+            "name": "customerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CustomerOrdersMinSummary"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/customer_demographics": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CustomerDemographic"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/customer_and_suppliers_by_city": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Customer_and_Suppliers_by_City"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/employees": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EmployeeString<>f__AnonymousType9"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/employee_titles": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Employee_Titles"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/invoices": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Invoice"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/invoices/customer/{customerId}": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "parameters": [
+          {
+            "name": "customerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CustomerInvoiceSummary"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/invoices/orders/{orderId}": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "parameters": [
+          {
+            "name": "orderId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OrderInvoiceSummary"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/orders": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Order"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/order_details": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Order_Detail"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/order_details_extended": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Order_Details_Extended"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/order_subtotals": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Order_Subtotal"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/orders_qry": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Orders_Qry"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/products": {
+      "get": {
+        "tags": [
+          "NorthwindCloudApp"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Product"
                   }
                 }
               }
@@ -647,14 +1418,16 @@
         "type": "object",
         "properties": {
           "orderYear": {
-            "type": "string"
+            "type": "integer",
+            "format": "int32"
           },
           "category": {
-            "type": "integer",
+            "type": "string",
             "nullable": true
           },
           "numberOfOrders": {
-            "type": "string"
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -675,16 +1448,16 @@
             "nullable": true
           },
           "picture": {
-            "type": "integer",
-            "format": "int32",
+            "type": "string",
+            "format": "byte",
             "nullable": true
           },
           "products": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CategoryOrdersByCountry"
+              "$ref": "#/components/schemas/Product"
             },
-            "nullable": false
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -801,12 +1574,12 @@
         "type": "object",
         "properties": {
           "productName": {
-            "type": "integer",
-            "format": "int32",
+            "type": "string",
             "nullable": true
           },
           "unitPrice": {
-            "type": "string",
+            "type": "number",
+            "format": "double"
           },
           "quantity": {
             "type": "integer",
@@ -826,7 +1599,8 @@
         "additionalProperties": false
       },
       "Customer": {
-        "type": "array",
+        "type": "object",
+        "properties": {
           "customerID": {
             "type": "string",
             "nullable": true
