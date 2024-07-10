@@ -18,7 +18,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Alphabetical_list_of_product"
+                    "$ref": "#/components/schemas/MostPopularProduct"
                   }
                 }
               }
@@ -27,14 +27,14 @@
         }
       }
     },
-    "/api/category_most_popular_product/{categoryName}": {
+    "/api/category_most_popular_product/{categoryNameX}": {
       "get": {
         "tags": [
           "NorthwindCloudApp"
         ],
         "parameters": [
           {
-            "name": "categoryName",
+            "name": "categoryNameX",
             "in": "path",
             "required": true,
             "schema": {
@@ -50,7 +50,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/MostPopularProduct"
+                    "$ref": "#/components/schemas/Alphabetical_list_of_product"
                   }
                 }
               }
@@ -59,7 +59,7 @@
         }
       }
     },
-    "/api/category_most_popular_product": {
+    "/api/category_most_popular_productZ": {
       "get": {
         "tags": [
           "NorthwindCloudApp"
@@ -70,7 +70,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
+                  "type": "object",
                   "items": {
                     "$ref": "#/components/schemas/MostPopularProduct"
                   }
@@ -89,10 +89,10 @@
         "parameters": [
           {
             "name": "categoryName",
-            "in": "path",
-            "required": true,
+            "in": "query",
+            "required": false,
             "schema": {
-              "type": "string"
+              "type": "number"
             }
           }
         ],
@@ -126,7 +126,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CategorySalesSummary"
+                    "$ref": "#/components/schemas/CategorySummaryByCustomer"
                   }
                 }
               }
@@ -142,7 +142,7 @@
         ],
         "parameters": [
           {
-            "name": "categoryName",
+            "name": "categoryNameY",
             "in": "path",
             "required": true,
             "schema": {
@@ -1418,16 +1418,14 @@
         "type": "object",
         "properties": {
           "orderYear": {
-            "type": "integer",
-            "format": "int32"
+            "type": "string"
           },
           "category": {
-            "type": "string",
+            "type": "integer",
             "nullable": true
           },
           "numberOfOrders": {
-            "type": "integer",
-            "format": "int32"
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -1448,16 +1446,16 @@
             "nullable": true
           },
           "picture": {
-            "type": "string",
-            "format": "byte",
+            "type": "integer",
+            "format": "int32",
             "nullable": true
           },
           "products": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Product"
+              "$ref": "#/components/schemas/CategoryOrdersByCountry"
             },
-            "nullable": true
+            "nullable": false
           }
         },
         "additionalProperties": false
@@ -1574,12 +1572,12 @@
         "type": "object",
         "properties": {
           "productName": {
-            "type": "string",
+            "type": "integer",
+            "format": "int32",
             "nullable": true
           },
           "unitPrice": {
-            "type": "number",
-            "format": "double"
+            "type": "string",
           },
           "quantity": {
             "type": "integer",
@@ -1599,8 +1597,7 @@
         "additionalProperties": false
       },
       "Customer": {
-        "type": "object",
-        "properties": {
+        "type": "array",
           "customerID": {
             "type": "string",
             "nullable": true
