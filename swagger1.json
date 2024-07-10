@@ -113,28 +113,6 @@
         }
       }
     },
-    "/api/category_sales_summary": {
-      "get": {
-        "tags": [
-          "NorthwindCloudApp"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CategorySummaryByCustomer"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/api/category_orders/{categoryName}": {
       "get": {
         "tags": [
