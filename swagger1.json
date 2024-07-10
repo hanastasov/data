@@ -5,28 +5,6 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/alphabetical_list_of_products": {
-      "get": {
-        "tags": [
-          "NorthwindCloudApp"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Alphabetical_list_of_product"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/api/category_most_popular_product/{categoryName}": {
       "get": {
         "tags": [
@@ -34,16 +12,16 @@
         ],
         "parameters": [
           {
-            "name": "categoryName",
-            "in": "path",
-            "required": true,
+            "name": "categoryName2",
+            "in": "query",
+            "required": false,
             "schema": {
-              "type": "string"
+              "type": "int32"
             }
           }
         ],
         "responses": {
-          "200": {
+          "default": {
             "description": "Success",
             "content": {
               "application/json": {
@@ -59,10 +37,10 @@
         }
       }
     },
-    "/api/category_most_popular_product": {
+    "/api/category_most_popular_product2": {
       "get": {
         "tags": [
-          "NorthwindCloudApp"
+          "NorthwindCloudApp2"
         ],
         "responses": {
           "200": {
@@ -81,7 +59,7 @@
         }
       }
     },
-    "/api/category_summary_by_customer/{categoryName}": {
+    "/api/category_summary_by_customer/{categoryName2}": {
       "get": {
         "tags": [
           "NorthwindCloudApp"
@@ -2962,13 +2940,9 @@
       "Territory": {
         "type": "object",
         "properties": {
-          "territoryID": {
+          "territoryDescription2": {
             "type": "string",
-            "nullable": true
-          },
-          "territoryDescription": {
-            "type": "string",
-            "nullable": true
+            "nullable": false
           },
           "regionID": {
             "type": "integer",
