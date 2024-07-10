@@ -1433,21 +1433,21 @@
       "Category": {
         "type": "object",
         "properties": {
-          "categoryIDD": {
+          "categoryID": {
             "type": "integer",
             "format": "int32"
           },
-          "categoryNameX": {
+          "categoryName": {
             "type": "string",
             "nullable": true
           },
-          "descriptionX": {
+          "description": {
             "type": "string",
             "nullable": true
           },
-          "pictureX": {
-            "type": "string",
-            "format": "byte",
+          "picture": {
+            "type": "integer",
+            "format": "int32",
             "nullable": true
           },
           "products": {
@@ -1455,7 +1455,7 @@
             "items": {
               "$ref": "#/components/schemas/CategoryOrdersByCountry"
             },
-            "nullable": true
+            "nullable": false
           }
         },
         "additionalProperties": false
@@ -1572,12 +1572,12 @@
         "type": "object",
         "properties": {
           "productName": {
-            "type": "string",
+            "type": "integer",
+            "format": "int32",
             "nullable": true
           },
           "unitPrice": {
-            "type": "number",
-            "format": "double"
+            "type": "string",
           },
           "quantity": {
             "type": "integer",
@@ -1597,8 +1597,7 @@
         "additionalProperties": false
       },
       "Customer": {
-        "type": "object",
-        "properties": {
+        "type": "array",
           "customerID": {
             "type": "string",
             "nullable": true
