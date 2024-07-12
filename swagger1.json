@@ -5,28 +5,6 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/categories_ordered_by_year": {
-      "get": {
-        "tags": [
-          "NorthwindCloudApp"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CategoriesOrderedByYear"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/api/categories_ordered_by_year/{categoryName}": {
       "get": {
         "tags": [
@@ -51,50 +29,6 @@
                   "type": "array",
                   "items": {
                     "$ref": "#/components/schemas/CategoriesOrderedByYear"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/categories_products": {
-      "get": {
-        "tags": [
-          "NorthwindCloudApp"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Product"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/category_sales_for_1997": {
-      "get": {
-        "tags": [
-          "NorthwindCloudApp"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Category_Sales_for_1997"
                   }
                 }
               }
