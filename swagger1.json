@@ -1756,7 +1756,7 @@
           "employee": {
             "$ref": "#/components/schemas/Employee"
           },
-          "fullName": {
+          "fullName2": {
             "type": "string",
             "nullable": true
           }
