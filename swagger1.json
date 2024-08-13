@@ -300,28 +300,6 @@
         }
       }
     },
-    "/api/invoices": {
-      "get": {
-        "tags": [
-          "NorthwindCloudApp"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Invoice"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/api/invoices/customer/{customerId}": {
       "get": {
         "tags": [
@@ -329,7 +307,7 @@
         ],
         "parameters": [
           {
-            "name": "customerId",
+            "name": "customerIdd",
             "in": "path",
             "required": true,
             "schema": {
@@ -412,7 +390,7 @@
     "/api/order_details": {
       "get": {
         "tags": [
-          "NorthwindCloudApp"
+          "NorthwindCloudAp2p"
         ],
         "responses": {
           "200": {
@@ -444,7 +422,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Order_Details_Extended"
+                    "$ref": "#/components/schemas/Order_Detail"
                   }
                 }
               }
@@ -2020,18 +1998,6 @@
             "type": "integer",
             "format": "int32"
           },
-          "unitPrice": {
-            "type": "number",
-            "format": "double"
-          },
-          "quantity": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "discount": {
-            "type": "number",
-            "format": "float"
-          },
           "order": {
             "$ref": "#/components/schemas/Order"
           },
@@ -2111,18 +2077,6 @@
             "nullable": true
           },
           "customerID": {
-            "type": "string",
-            "nullable": true
-          },
-          "companyName": {
-            "type": "string",
-            "nullable": true
-          },
-          "contactName": {
-            "type": "string",
-            "nullable": true
-          },
-          "contactTitle": {
             "type": "string",
             "nullable": true
           },
@@ -2231,21 +2185,6 @@
           "requiredDate": {
             "type": "string",
             "format": "date-time",
-            "nullable": true
-          },
-          "shippedDate": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "shipVia": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "freight": {
-            "type": "number",
-            "format": "double",
             "nullable": true
           },
           "shipName": {
