@@ -2059,7 +2059,7 @@
             "in": "query",
             "required": true,
             "schema": {
-              "type": "string",
+              "type": "string"
             }
           }
         ],
@@ -4716,7 +4716,7 @@
         "type": "object",
         "properties": {
           "categoryId": {
-            "type": "string",
+            "type": "string"
           },
           "description": {
             "type": "integer",
