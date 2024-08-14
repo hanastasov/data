@@ -3479,7 +3479,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CustomerDTO"
+                    "$ref": "#/components/schemas/CustomerDto"
                   }
                 }
               },
@@ -3487,7 +3487,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CustomerDTO"
+                    "$ref": "#/components/schemas/CustomerDto"
                   }
                 }
               },
@@ -3495,7 +3495,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CustomerDTO"
+                    "$ref": "#/components/schemas/CustomerDto"
                   }
                 }
               }
@@ -3511,22 +3511,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/CustomerDTO"
+                "$ref": "#/components/schemas/CustomerDto"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CustomerDTO"
+                "$ref": "#/components/schemas/CustomerDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CustomerDTO"
+                "$ref": "#/components/schemas/CustomerDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CustomerDTO"
+                "$ref": "#/components/schemas/CustomerDto"
               }
             }
           }
@@ -3537,17 +3537,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/CustomerDTO"
+                  "$ref": "#/components/schemas/CustomerDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CustomerDTO"
+                  "$ref": "#/components/schemas/CustomerDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CustomerDTO"
+                  "$ref": "#/components/schemas/CustomerDto"
                 }
               }
             }
