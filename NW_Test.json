@@ -2046,12 +2046,20 @@
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "idMod",
             "in": "path",
             "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "id2",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
             }
           }
         ],
@@ -2746,7 +2754,7 @@
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "selectedId",
             "in": "path",
             "required": true,
             "schema": {
@@ -3471,7 +3479,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ShipperDto"
+                    "$ref": "#/components/schemas/CustomerDto"
                   }
                 }
               },
@@ -3479,7 +3487,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ShipperDto"
+                    "$ref": "#/components/schemas/CustomerDto"
                   }
                 }
               },
@@ -3487,7 +3495,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ShipperDto"
+                    "$ref": "#/components/schemas/CustomerDto"
                   }
                 }
               }
@@ -3503,22 +3511,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/ShipperDto"
+                "$ref": "#/components/schemas/CustomerDto"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ShipperDto"
+                "$ref": "#/components/schemas/CustomerDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ShipperDto"
+                "$ref": "#/components/schemas/CustomerDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ShipperDto"
+                "$ref": "#/components/schemas/CustomerDto"
               }
             }
           }
@@ -3529,17 +3537,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/ShipperDto"
+                  "$ref": "#/components/schemas/CustomerDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ShipperDto"
+                  "$ref": "#/components/schemas/CustomerDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ShipperDto"
+                  "$ref": "#/components/schemas/CustomerDto"
                 }
               }
             }
@@ -3890,162 +3898,6 @@
             }
           }
         }
-      }
-    },
-    "/Suppliers": {
-      "get": {
-        "tags": [
-          "Suppliers"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/SupplierDto"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/SupplierDto"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/SupplierDto"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "Suppliers"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/SupplierDto"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/SupplierDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/SupplierDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/SupplierDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/SupplierDto"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SupplierDto"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SupplierDto"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized"
-          }
-        },
-        "security": [
-          {
-            "Bearer": [ ]
-          }
-        ]
-      },
-      "put": {
-        "tags": [
-          "Suppliers"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/SupplierDto"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/SupplierDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/SupplierDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/SupplierDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/SupplierDto"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SupplierDto"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SupplierDto"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized"
-          }
-        },
-        "security": [
-          {
-            "Bearer": [ ]
-          }
-        ]
       }
     },
     "/Suppliers/GetPagedSuppliers": {
@@ -4864,11 +4716,10 @@
         "type": "object",
         "properties": {
           "categoryId": {
-            "type": "integer",
-            "format": "int32"
+            "type": "string"
           },
           "description": {
-            "type": "string",
+            "type": "integer",
             "nullable": true
           },
           "name": {
@@ -4980,15 +4831,10 @@
         ],
         "type": "object",
         "properties": {
-          "employeeId": {
+          "employeeIdMod": {
             "type": "integer",
             "description": "Number automatically assigned to new employee.",
             "format": "int32"
-          },
-          "lastName": {
-            "type": "string",
-            "description": "Employee's last name.",
-            "nullable": true
           },
           "firstName": {
             "type": "string",
@@ -5112,14 +4958,6 @@
             "type": "integer",
             "format": "int32"
           },
-          "unitPrice": {
-            "type": "number",
-            "format": "double"
-          },
-          "quantity": {
-            "type": "integer",
-            "format": "int32"
-          },
           "discount": {
             "type": "number",
             "format": "float"
@@ -5130,11 +4968,11 @@
       "OrderDto": {
         "type": "object",
         "properties": {
-          "orderId": {
+          "orderIdMod": {
             "type": "integer",
             "format": "int32"
           },
-          "customerId": {
+          "customerIdMod": {
             "type": "string",
             "nullable": true
           },
@@ -5204,7 +5042,7 @@
       "ProductDto": {
         "type": "object",
         "properties": {
-          "productId": {
+          "productIdMod": {
             "type": "integer",
             "format": "int32"
           },
@@ -5220,11 +5058,6 @@
           },
           "quantityPerUnit": {
             "type": "string",
-            "nullable": true
-          },
-          "unitPrice": {
-            "type": "number",
-            "format": "double",
             "nullable": true
           },
           "unitsInStock": {
@@ -5416,11 +5249,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "companyName": {
-            "type": "string",
-            "nullable": true
-          },
-          "contactName": {
+          "contactNameMod": {
             "type": "string",
             "nullable": true
           },
