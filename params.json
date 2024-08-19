@@ -437,17 +437,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/ShipperDto"
+                  "$ref": "#/components/schemas/CategoryDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ShipperDto"
+                  "$ref": "#/components/schemas/CategoryDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ShipperDto"
+                  "$ref": "#/components/schemas/CategoryDto"
                 }
               }
             }
@@ -475,17 +475,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/ShipperDto"
+                  "$ref": "#/components/schemas/CategoryDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ShipperDto"
+                  "$ref": "#/components/schemas/CategoryDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ShipperDto"
+                  "$ref": "#/components/schemas/CategoryDto"
                 }
               }
             }
