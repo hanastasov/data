@@ -2055,7 +2055,7 @@
             }
           },
           {
-            "name": "idMod",
+            "name": "idModd",
             "in": "path",
             "required": true,
             "schema": {
