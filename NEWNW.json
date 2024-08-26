@@ -2046,16 +2046,7 @@
         ],
         "parameters": [
           {
-            "name": "id2",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "idModd",
+            "name": "id",
             "in": "path",
             "required": true,
             "schema": {
