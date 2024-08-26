@@ -980,7 +980,15 @@
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "id2",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "idMod",
             "in": "path",
             "required": true,
             "schema": {
@@ -5065,11 +5073,11 @@
       "OrderDto": {
         "type": "object",
         "properties": {
-          "orderIdMod": {
+          "orderId": {
             "type": "integer",
             "format": "int32"
           },
-          "customerIdMod": {
+          "customerId": {
             "type": "string",
             "nullable": true
           },
