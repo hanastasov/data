@@ -2046,7 +2046,16 @@
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "idMod",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id2",
             "in": "path",
             "required": true,
             "schema": {
@@ -2746,7 +2755,7 @@
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "selectedId",
             "in": "path",
             "required": true,
             "schema": {
@@ -3471,7 +3480,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ShipperDto"
+                    "$ref": "#/components/schemas/CustomerDto"
                   }
                 }
               },
@@ -3479,7 +3488,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ShipperDto"
+                    "$ref": "#/components/schemas/CustomerDto"
                   }
                 }
               },
@@ -3487,7 +3496,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ShipperDto"
+                    "$ref": "#/components/schemas/CustomerDto"
                   }
                 }
               }
@@ -4046,63 +4055,6 @@
             "Bearer": [ ]
           }
         ]
-      }
-    },
-    "/Suppliers/GetPagedSuppliers": {
-      "get": {
-        "tags": [
-          "Suppliers"
-        ],
-        "parameters": [
-          {
-            "name": "skip",
-            "in": "query",
-            "description": "The number of records to skip before starting to fetch them. If this parameter is not provided, fetching starts from the beginning.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "top",
-            "in": "query",
-            "description": "The maximum number of records to fetch. If this parameter is not provided, all records are fetched.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "orderBy",
-            "in": "query",
-            "description": "A comma-separated list of fields to order the records by, along with the sort direction (e.g., 'field1 asc, field2 desc').",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/SupplierDtoPagedResultDto"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SupplierDtoPagedResultDto"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SupplierDtoPagedResultDto"
-                }
-              }
-            }
-          }
-        }
       }
     },
     "/Suppliers/GetPagedSuppliersWithPage": {
@@ -4864,11 +4816,11 @@
         "type": "object",
         "properties": {
           "categoryId": {
-            "type": "integer",
+            "type": "string",
             "format": "int32"
           },
           "description": {
-            "type": "string",
+            "type": "integer",
             "nullable": true
           },
           "name": {
@@ -4888,7 +4840,7 @@
             },
             "nullable": true
           },
-          "totalRecordsCount": {
+          "totalRecordsCountMod": {
             "type": "integer",
             "format": "int32"
           },
@@ -4984,11 +4936,6 @@
             "type": "integer",
             "description": "Number automatically assigned to new employee.",
             "format": "int32"
-          },
-          "lastName": {
-            "type": "string",
-            "description": "Employee's last name.",
-            "nullable": true
           },
           "firstName": {
             "type": "string",
@@ -5112,33 +5059,21 @@
             "type": "integer",
             "format": "int32"
           },
-          "unitPrice": {
-            "type": "number",
-            "format": "double"
-          },
-          "quantity": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "discount": {
-            "type": "number",
-            "format": "float"
-          }
         },
         "additionalProperties": false
       },
       "OrderDto": {
         "type": "object",
         "properties": {
-          "orderId": {
+          "orderIdMod": {
             "type": "integer",
             "format": "int32"
           },
-          "customerId": {
+          "customerIdMod": {
             "type": "string",
             "nullable": true
           },
-          "employeeId": {
+          "employeeIdMod": {
             "type": "integer",
             "format": "int32"
           },
@@ -5204,7 +5139,7 @@
       "ProductDto": {
         "type": "object",
         "properties": {
-          "productId": {
+          "productIdMod": {
             "type": "integer",
             "format": "int32"
           },
@@ -5220,11 +5155,6 @@
           },
           "quantityPerUnit": {
             "type": "string",
-            "nullable": true
-          },
-          "unitPrice": {
-            "type": "number",
-            "format": "double",
             "nullable": true
           },
           "unitsInStock": {
