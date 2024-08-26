@@ -4923,11 +4923,11 @@
         ],
         "type": "object",
         "properties": {
-          "customerId": {
+          "customerIdMod": {
             "type": "string",
             "nullable": true
           },
-          "companyName": {
+          "companyNameMod": {
             "minLength": 1,
             "type": "string"
           },
