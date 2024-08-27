@@ -980,7 +980,7 @@
         ],
         "parameters": [
           {
-            "name": "id2",
+            "name": "id22",
             "in": "path",
             "required": true,
             "schema": {
@@ -988,7 +988,7 @@
             }
           },
           {
-            "name": "idMod",
+            "name": "idMod2",
             "in": "path",
             "required": true,
             "schema": {
