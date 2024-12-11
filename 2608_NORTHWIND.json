@@ -988,7 +988,7 @@
             }
           },
           {
-            "name": "idMod22",
+            "name": "id",
             "in": "path",
             "required": true,
             "schema": {
@@ -2054,7 +2054,7 @@
         ],
         "parameters": [
           {
-            "name": "idModd",
+            "name": "id",
             "in": "path",
             "required": true,
             "schema": {
@@ -4848,7 +4848,7 @@
             },
             "nullable": true
           },
-          "totalRecordsCountMod": {
+          "totalRecordsCount": {
             "type": "integer",
             "format": "int32"
           },
@@ -5081,7 +5081,7 @@
             "type": "string",
             "nullable": true
           },
-          "employeeIdMod": {
+          "employeeId": {
             "type": "integer",
             "format": "int32"
           },
@@ -5147,7 +5147,7 @@
       "ProductDto": {
         "type": "object",
         "properties": {
-          "productIdMod": {
+          "productId": {
             "type": "integer",
             "format": "int32"
           },
