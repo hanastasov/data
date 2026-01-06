@@ -889,7 +889,7 @@
         }
       }
     },
-    "/Customers/{id}/{id2}": {
+    "/Customers/{id}/{id2}/{id3}": {
       "get": {
         "tags": [
           "Customers"
@@ -905,6 +905,14 @@
           },
           {
             "name": "id2",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+                    {
+            "name": "id3",
             "in": "path",
             "required": true,
             "schema": {
