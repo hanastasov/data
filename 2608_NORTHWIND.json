@@ -129,7 +129,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CategoryDto"
+                    "$ref": "#/components/schemas/CustomerDto"
                   }
                 }
               },
@@ -137,7 +137,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CategoryDto"
+                    "$ref": "#/components/schemas/CustomerDto"
                   }
                 }
               },
@@ -145,7 +145,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CategoryDto"
+                    "$ref": "#/components/schemas/CustomerDto"
                   }
                 }
               }
